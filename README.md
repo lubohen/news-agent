@@ -50,7 +50,7 @@ Abra o `.env` e preencha **todos os campos** marcados com `<ALTERE_AQUI>`:
 |---|---|
 | `AUTHENTICATION_API_KEY` | Chave forte aleatória (ex: `openssl rand -hex 32`) |
 | `POSTGRES_PASSWORD` | Senha do banco (qualquer string segura) |
-| `WHATSAPP_RECIPIENT` | `+5511917121239` |
+| `WHATSAPP_RECIPIENT` | Seu número com DDI+DDD: `+5511999990000` |
 | `EMAIL_SENDER` | `lubohen@outlook.com` |
 | `EMAIL_APP_PASSWORD` | Senha de App da Microsoft (veja abaixo) |
 | `EMAIL_RECIPIENT` | `lubohen@outlook.com` |
