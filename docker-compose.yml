@@ -1,0 +1,20 @@
+services:
+  # ─────────────────────────────────────
+  # News Agent — scheduler Python
+  # Roda diariamente no horário configurado em .env
+  # ─────────────────────────────────────
+  news-agent:
+    build: .
+    container_name: news-agent
+    restart: always
+    volumes:
+      - ./agent:/app/agent
+      - ./logs:/app/logs
+    env_file:
+      - .env
+    networks:
+      - news-agent-net
+
+networks:
+  news-agent-net:
+    driver: bridge

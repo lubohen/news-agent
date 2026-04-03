@@ -1,0 +1,26 @@
+# Arquivo de configuração real — NUNCA versionar!
+.env
+
+# Logs gerados pelo agente
+logs/
+
+# Cache Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Ambientes virtuais
+.venv/
+venv/
+env/
+
+# Docker volumes locais
+postgres_data/
+evolution_instances/
+
+# Misc
+.DS_Store
+*.swp
+*.swo
