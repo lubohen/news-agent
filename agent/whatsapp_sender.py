@@ -103,9 +103,11 @@ def send_whatsapp_headlines(articles: List[Dict]) -> None:
         part_label = f" ({idx}/{total_parts})" if total_parts > 1 else ""
         lines = [f"📰 *Tech & AI News — {today}*{part_label}", "━━━━━━━━━━━━━━━━━━", ""]
         for art in numbered:
-            title = art['title'][:120] + ("…" if len(art['title']) > 120 else "")
+            title = art['title'][:100] + ("…" if len(art['title']) > 100 else "")
             source = f"  _{art['source']}_" if art.get("source") else ""
             lines.append(f"*{art['_global_n']}.* {title}{source}")
+            if art.get("link"):
+                lines.append(f"🔗 {art['link']}")
             lines.append("")
         lines.append("━━━━━━━━━━━━━━━━━━")
         if idx == total_parts:
